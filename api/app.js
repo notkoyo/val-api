@@ -13,3 +13,5 @@ app.get("/riot.txt", (req, res) => {
     console.error(error);
   }
 })
+
+module.exports = app;
