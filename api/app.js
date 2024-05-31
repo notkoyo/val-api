@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const getRank = require("./routes/rank");
 
 const app = express();
 
@@ -12,6 +13,8 @@ app.get("/riot.txt", (req, res) => {
   } catch (error) {
     console.error(error);
   }
-})
+});
+
+app.get("/val/rank/:region/:username/:tag/", getRank);
 
 module.exports = app;
